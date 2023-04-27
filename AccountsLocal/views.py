@@ -32,3 +32,13 @@ class UpdateUserDB(APIView):
             return Response({'message':'User Updated Successfully','payload':serialized_data},status=status.HTTP_200_OK)
         else:
             return Response({'error':serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
+class FetchLocalUsers(APIView):
+    def get(self,request):
+        try:
+            usr_obj = UserLocal.objects.all()
+            serializer = UserDisplaySerializer(usr_obj, many=True)
+            serialized_data = serializer.data
+            return Response(serialized_data,status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({'error':str(e)}, status=status.HTTP_400_BAD_REQUEST)
