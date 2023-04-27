@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "93b4e2a9-9d34-4866-b265-11aea073fe82",
+		"name": "DataSync",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17435228"
+	},
+	"item": [
+		{
+			"name": "Fetch Stripe database",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/stripe/fetch",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stripe",
+						"fetch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Entry in Stripe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"hello\",\n    \"email\":\"hello@abc.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/stripe/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stripe",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit entry in Stripe",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"mutharia\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/stripe/update/J7WNdk5t7w",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stripe",
+						"update",
+						"J7WNdk5t7w"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Local database",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/stripe/fetch",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stripe",
+						"fetch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Entry in local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"ad\",\n    \"email\":\"ad@chennai.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/account/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"account",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit entry in local",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"test12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/stripe/update/VWbTwpckG5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"stripe",
+						"update",
+						"VWbTwpckG5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,6 +1,8 @@
 # DataSync
 A django based project which syncs your local database with that of stripe with each API call made to either of them using celery task queue.
 
+Link to API Documentation - https://docs.google.com/document/d/13BBRdo5hFQpRiKVkWh1xOGqyN6uyv7pwhd8gRZUTLgE/edit?usp=sharing
+
 Steps to run the project:
 1. Create and activate virtualenvironment
 2. Install the necessay dependencies from requirements.txt using the command "pip3 install -r requirements.txt"
