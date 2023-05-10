@@ -13,8 +13,10 @@ Steps to run the project:
     a. "python3 manage.py makemigrations"
     b. "python3 manage.py migrate"
 4. Run celery in a seperate terminal using the command "celery -A DataSync worker --concurrency=3 -l info"
+5. Run flower in a seperate terminal using the command "celery -A DataSync flower --loglevel=info".
 
 Your project will now be up and running at http://127.0.0.1:8000
+Your flower dashboard can be seen at http://localhost:5555/dashboard
 
 Q. How to further integrate this with Salesforce?
 A. The exposed API's of salesforce can easily be written as functions and be called aysnchronously using celery.
