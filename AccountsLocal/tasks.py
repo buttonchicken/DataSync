@@ -9,6 +9,9 @@ stripe.api_key = STRIPE_SECRET_KEY
 @app.task(bind=True)
 def create_customer_stripe(self,data):
     try:
+        existing_cutomer = stripe.Customer.list(email=data['email'])
+        if len(existing_cutomer)>0:
+            return {'error':'Customer with same email exists!'}
         cust = stripe.Customer.create(
                id = data['id'],
                name = data['name'],

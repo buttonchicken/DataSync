@@ -13,11 +13,17 @@ class CreateUserStripe(APIView):
        data = request.data
        data['id']=shortuuid.uuid()[:10]
        try:
+        #checking if the customer already exists in the stripe database
+        existing_cutomer = stripe.Customer.list(email=data['email'])
+        if len(existing_cutomer)>0:
+           return Response({'error':'Customer with same email exists!'},status=status.HTTP_400_BAD_REQUEST)
+        #creating entry in the stripe database
         cust = stripe.Customer.create(
                             id = data['id'],
                             name = data['name'],
                             email = data['email']
                         )
+        #enqueing task to create an entry in the local database
         create_user_local.delay(data)
         return Response(cust,status=status.HTTP_200_OK)
        except Exception as e:
