@@ -126,8 +126,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STRIPE_PUSHABLE_KEY = 'pk_test_51N0VpQSBEy4wpTf0RktfwfcbSB0VF2BXemu0dHYQT9UoCsudSseEuiTHBanLfLH1j482rwbyTfhwm25qrWvhcFIL00Z3B27ZuE'
-STRIPE_SECRET_KEY = 'sk_test_51N0VpQSBEy4wpTf0vCJycqrBu20RMx7Y3rDA4yx6gtTPgspTyFdEXAnat088x4Zzmrjtc7Oo4rQffUTt42uDvo3V00SQ2bOAXk'
+STRIPE_PUSHABLE_KEY = ''
+STRIPE_SECRET_KEY = ''
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
